@@ -1,5 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 file='data/real_world_dataset.csv'
 df=pd.read_csv(file)
@@ -41,3 +43,19 @@ for col in obj_col:
 clean_dataset='data/clean_real_world_dataset.csv'
 df.to_csv(clean_dataset,index=False)
 
+sns.set(style='whitegrid')
+plt.figure(figsize=(10,6))
+
+col=df.columns[-1]
+sns.countplot(data=df,x=col,palette='Set2')
+plt.title(f"Distribution of target column: {col}")
+
+plt.figure(figsize=(12,8))
+sns.heatmap(df.corr(numeric_only=True),annot=True,cmap="coolwarm",fmt='.2f')
+plt.title("Correlation Heatmap")
+plt.show()
+
+numeric_columns=df.select_dtypes(include='number').columns[:5]
+sns.pairplot(df[numeric_columns],corner=True)
+plt.suptitle('Pairplot of selected features',y=1.02)
+plt.show()
