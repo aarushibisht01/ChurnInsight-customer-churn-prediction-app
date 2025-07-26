@@ -3,7 +3,7 @@
 Welcome to the **Customer Churn Prediction App**! This interactive Streamlit web application predicts whether a customer will churn based on input data, using a trained **Logistic Regression model**. It also includes data visualizations to understand churn trends.
 
 🔗 **Live App:** [Click here to open the app](https://churninsight-customer-churn-prediction-app-9tanflewkrnsz33tcpn.streamlit.app/)  
-📊 **Dataset Used:** Cleaned version of the [Telco Customer Churn Dataset](https://www.kaggle.com/blastchar/telco-customer-churn)
+📊 **Dataset Used:** Cleaned version of the [Telcom Churn Dataset](https://www.kaggle.com/datasets/mnassrib/telecom-churn-datasets)
 
 ---
 
