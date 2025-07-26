@@ -68,5 +68,7 @@ Pairwise relationships of features and churn.
 
 AARUSHI BISHT
 BTech CSE (AI/ML)
+
 [LinkedIn](www.linkedin.com/in/aarushi-bisht-b08508231)
+
 [Github](https://github.com/aarushibisht01)
