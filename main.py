@@ -5,6 +5,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report,confusion_matrix,roc_auc_score,roc_curve
+import joblib
 
 file='data/real_world_dataset.csv'
 df=pd.read_csv(file)
@@ -63,8 +64,8 @@ sns.pairplot(df[numeric_columns],corner=True)
 plt.suptitle('Pairplot of selected features',y=1.02)
 plt.show()
 
-X=df.drop("churn",axis=1)
-y=df["churn"]
+X=df.drop("Churn",axis=1)
+y=df["Churn"]
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42,stratify=y)
 
@@ -95,3 +96,4 @@ plt.ylabel("True Positive Rate")
 plt.legend()
 plt.show()
 
+joblib.dump(randon_forest_model, "churn_model.pkl")
